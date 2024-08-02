@@ -83,6 +83,7 @@ button {
 
 .cell {
     user-select: none;
+    font-size: 3rem
 }
 
 .cell:hover {

@@ -187,8 +187,10 @@ cells.forEach(cell => {
         let target = e.target;
         let row = parseInt(target.getAttribute("data-row"))
         let column = parseInt(target.getAttribute("data-column"))
-        if (!gameManager.getIsOver()) {
+        if (!gameManager.getIsOver() && target.innerText === "") {
             target.innerText = gameManager.getTurn();
+        } else {
+            return;
         }
 
         gameManager.play(row, column);
